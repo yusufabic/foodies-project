@@ -4,9 +4,13 @@ import Link from "next/link";
 import { GetMeals } from "@/lib/meal";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse the delicious meals sheared by our vibrant community.",
+};
+
 async function Meals() {
   const meals = await GetMeals();
-
   return <MealsGrid meals={meals} />;
 }
 
